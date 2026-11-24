@@ -50,7 +50,7 @@ async function conectarPython(endpoint, atendimentos, res, tipo) {
     const url = process.env.PYTHON_API_URL
     const resposta = await fetch (`${url.replace(/\/$/,"")}${endpoint}`, {
         method: "POST",
-        headers: {"Content-type": "application/json"},
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify({atendimentos})
     })
     if(!resposta.ok){
